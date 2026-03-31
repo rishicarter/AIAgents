@@ -169,3 +169,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+app/data/BYLD-values.png
+.gitignore
+app/data/BYLD_HR_Trends_Survey.pdf
+llm_ground/BYLD-values.png

@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# pylint: disable=unused-argument
-# This program is dedicated to the public domain under the CC0 license.
-
 """
 Simple Bot to reply to Telegram messages.
 
@@ -20,8 +16,11 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 
+from app.handlers.ask_handler import ask_handler
+from app.handlers import image_handler
+
 from telegram import ForceReply, Update, BotCommand
-from telegram.ext import Application, CommandHandler, ContextTypes, MessageHandler, filters
+from telegram.ext import Application, CommandHandler, ContextTypes, MessageHandler, filters, CallbackContext
 
 # Enable logging
 logging.basicConfig(
@@ -34,8 +33,7 @@ logger = logging.getLogger(__name__)
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
-# Define a few command handlers. These usually take the two arguments update and
-# context.
+#Define a few command handlers. These usually take the two arguments update and context.
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Send a message when the command /start is issued."""
     user = update.effective_user
@@ -71,10 +69,22 @@ def main() -> None:
 
     # on different commands - answer in Telegram
     application.add_handler(CommandHandler("start", start))
-    application.add_handler(CommandHandler("help", help_command))
+    # application.add_handler(CommandHandler("help", help_command))
 
     # on non command i.e message - echo the message on Telegram
-    application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))
+    application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, ask_handler))
+    application.add_handler(CommandHandler("help", help_command))
+    application.add_handler(CommandHandler("query", ask_handler))
+ 
+    # /image — triggered when a photo is sent (with or without caption)
+    application.add_handler(
+        MessageHandler(
+            filters.PHOTO & filters.CaptionRegex(r"^/image"),
+            image_handler,
+        )
+    )
+    # Fallback: any photo upload without the caption command still routes here
+    application.add_handler(MessageHandler(filters.PHOTO, image_handler))
 
     # Run the bot until the user presses Ctrl-C
     application.run_polling(allowed_updates=Update.ALL_TYPES)
