@@ -152,7 +152,7 @@ docker compose up --build
 Bot Menu
 
 ```md
-![Menu](https://raw.githubusercontent.com/rishicarter/AIAgents/main/assets/photo1.jpeg)
+![Menu](/assets/photo1.jpeg)
 ```
 
 Start Command
