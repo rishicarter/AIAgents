@@ -116,9 +116,7 @@ docker compose up --build
 
 ### 🔹 High-Level Flow
 
-```md
 ![System Architecture](https://github.com/rishicarter/AIAgents/blob/main/assets/BYLD%20Architecture%20Diagram.jpg?raw=true)
-```
 
 ---
 
@@ -141,9 +139,7 @@ docker compose up --build
 6. Caption + tags + summary generated
 7. Response sent back to user
 
-```md
 ![Data FLow](assets/BYLD-Level0%20Data%20Flow.jpg)
-```
 
 ---
 
@@ -151,27 +147,19 @@ docker compose up --build
 
 Bot Menu
 
-```md
 ![Menu](/assets/photo1.jpeg)
-```
 
 Start Command
 
-```md
 ![Start](https://raw.githubusercontent.com/rishicarter/AIAgents/main/assets/photo2.jpeg)
-```
 
 Image Command
 
-```md
 ![Image](https://raw.githubusercontent.com/rishicarter/AIAgents/main/assets/photo3.jpeg)
-```
 
 Summary Command
 
-```md
 ![Summary](https://raw.githubusercontent.com/rishicarter/AIAgents/main/assets/photo4.jpeg)
-```
 
 ---
 
