@@ -152,25 +152,25 @@ docker compose up --build
 Bot Menu
 
 ```md
-![Menu](assets/photo1.jpeg)
+![Menu](https://raw.githubusercontent.com/rishicarter/AIAgents/main/assets/photo1.jpeg)
 ```
 
 Start Command
 
 ```md
-![Menu](assets/photo2.jpeg)
+![Start](https://raw.githubusercontent.com/rishicarter/AIAgents/main/assets/photo2.jpeg)
 ```
 
 Image Command
 
 ```md
-![Menu](assets/photo3.jpeg)
+![Image](https://raw.githubusercontent.com/rishicarter/AIAgents/main/assets/photo3.jpeg)
 ```
 
 Summary Command
 
 ```md
-![Menu](assets/photo4.jpeg)
+![Summary](https://raw.githubusercontent.com/rishicarter/AIAgents/main/assets/photo4.jpeg)
 ```
 
 ---
