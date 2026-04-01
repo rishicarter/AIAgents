@@ -117,7 +117,7 @@ docker compose up --build
 ### 🔹 High-Level Flow
 
 ```md
-![System Architecture](assets/BYLD%20Architecture%20Diagram.jpg)
+![System Architecture](https://github.com/rishicarter/AIAgents/blob/main/assets/BYLD%20Architecture%20Diagram.jpg?raw=true)
 ```
 
 ---
