@@ -5,12 +5,20 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "doc2md>=0.1.0",
     "easyocr>=1.7.2",
     "matplotlib>=3.10.9",
     "opencv-python>=4.13.0.92",
-    "paddleocr>=3.6.0",
+    "paddleocr[all]>=3.6.0",
     "paddlepaddle>=3.3.1",
     "pdf2image>=1.17.0",
     "pillow>=12.2.0",
     "pymupdf>=1.27.2.3",
+    "pymupdf4llm>=1.27.2.3",
+    "pytesseract>=0.3.13",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
 ]

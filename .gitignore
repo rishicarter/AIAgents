@@ -171,4 +171,8 @@ cython_debug/
 .pypirc
 .vscode/*
 *.jpg
-images/*.pdf
+images/*
+*.jpg
+*.jpeg
+.agents/*
+output/*
